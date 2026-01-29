@@ -52,5 +52,9 @@ def send_message(config: TelegramConfig, text: str) -> dict:
         json=payload,
         timeout=config.timeout,
     )
+    if not r.ok:
+        # IMPORTANT: don't log the URL (it contains the token)
+        raise RuntimeError(f"Telegram send failed: {r.status_code} {r.text}")
+    
     r.raise_for_status()
     return r.json()
