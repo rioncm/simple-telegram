@@ -45,7 +45,7 @@ def send_message(config: TelegramConfig, text: str) -> dict:
     payload = {
         "chat_id": config.chat_id,
         "text": text,
-        "parse_mode": "MarkdownV2",  # or HTML
+        "parse_mode": "HTML",  # or HTML
     }
     r = requests.post(
         url,
