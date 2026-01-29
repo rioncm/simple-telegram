@@ -3,13 +3,16 @@ requires = ["setuptools>=69", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "simple-telegram"
+name = "dead-simple-telegram"
 version = "0.1.0"
 description = "Dead simple helper for posting Telegram bot messages."
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
 keywords = ["telegram", "bot", "notification"]
+authors = [
+  { name = "Rion Morgenstern" }
+]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
@@ -26,6 +29,16 @@ classifiers = [
 dependencies = [
   "requests>=2.0",
 ]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7",
+]
+
+[project.urls]
+Homepage = "https://github.com/rioncm/simple-telegram"
+Repository = "https://github.com/rioncm/simple-telegram"
+Issues = "https://github.com/rioncm/simple-telegram/issues"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

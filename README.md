@@ -13,12 +13,12 @@ Can use env vars or pass a dictionary at run time. see examples below.
 Install from PyPI:
 
 ``` bash
-pip install simple-telegram
+pip install dead-simple-telegram
 ```
 
 # Examples
 
-There are two ways to use this lib. Import from `simple_telegram`:
+There are two ways to use this lib. Import from `dead_simple_telegram`:
 
 
 
@@ -30,7 +30,7 @@ TELEGRAM_CHAT_ID = "chat id for the conversation"
 TELEGRAM_TIMEOUT = 5 # optional defaults to 10
 
 ``` python
-from simple_telegram import TelegramConfig, send_message
+from dead_simple_telegram import TelegramConfig, send_message
 
 config = TelegramConfig.from_env()
 message = "This is a message"
@@ -40,7 +40,7 @@ send_message(config, message)
 
 ## With a Dictionary
 ``` python
-from simple_telegram import TelegramConfig, send_message
+from dead_simple_telegram import TelegramConfig, send_message
 
 config = TelegramConfig.from_dict({"bot_token": "YOURTOKEN", "chat_id": "YOURCHATID", "timeout":5})
 message = "This is a message"
